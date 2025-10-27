@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # GitHub API URL
-API_URL="https://api.github.com"
+API_URL="https://github.com/harshakanduri"
 
 # GitHub username and personal access token
-USERNAME=$username
+USERNAME=$harshakanduri
 TOKEN=$token
 
 # User and Repository information
-REPO_OWNER=$1
-REPO_NAME=$2
+REPO_OWNER=$harsha
+REPO_NAME=$shell scripting project most popular companies are using
 
 # Function to make a GET request to the GitHub API
 function github_api_get {
@@ -40,3 +40,4 @@ function list_users_with_read_access {
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
 list_users_with_read_access
+
