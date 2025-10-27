@@ -14,15 +14,15 @@ REPO_NAME=$shell scripting project most popular companies are using
 # Function to make a GET request to the GitHub API
 function github_api_get {
     local endpoint="$1"
-    local url="${API_URL}/${endpoint}"
+    local url="${https://github.com/harshakanduri}/${endpoint}"
 
     # Send a GET request to the GitHub API with authentication
-    curl -s -u "${USERNAME}:${TOKEN}" "$url"
+    curl -s -u "${harshakanduri}:${TOKEN}" "$url"
 }
 
 # Function to list users with read access to the repository
 function list_users_with_read_access {
-    local endpoint="repos/${REPO_OWNER}/${REPO_NAME}/collaborators"
+    local endpoint="repos/${harshakanduri}/${shell scripting project most popular companies are using}/collaborators"
 
     # Fetch the list of collaborators on the repository
     collaborators="$(github_api_get "$endpoint" | jq -r '.[] | select(.permissions.pull == true) | .login')"
@@ -38,6 +38,7 @@ function list_users_with_read_access {
 
 # Main script
 
-echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
+echo "Listing users with read access to ${harshakanduri}/${shell scripting project most popular companies are using}..."
 list_users_with_read_access
+
 
